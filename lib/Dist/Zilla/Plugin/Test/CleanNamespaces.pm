@@ -3,7 +3,7 @@ use warnings;
 package Dist::Zilla::Plugin::Test::CleanNamespaces;
 # ABSTRACT: Generate a test to check that all namespaces are clean
 # KEYWORDS: plugin testing namespaces clean dirty imports exports subroutines methods
-# vim: set ts=8 sw=4 tw=78 et :
+# vim: set ts=8 sts=4 sw=4 tw=78 et :
 
 use Moose;
 with (
