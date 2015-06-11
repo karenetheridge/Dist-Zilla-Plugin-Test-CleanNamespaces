@@ -25,7 +25,7 @@ sub mvp_aliases { return { skip => 'skips' } }
 has skips => (
     isa => 'ArrayRef[Str]',
     traits => ['Array'],
-    handles => { skips => 'elements' },
+    handles => { skips => 'sort' },
     lazy => 1,
     default => sub { [] },
 );
