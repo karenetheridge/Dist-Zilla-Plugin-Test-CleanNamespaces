@@ -5,6 +5,8 @@ package Dist::Zilla::Plugin::Test::CleanNamespaces;
 # KEYWORDS: plugin testing namespaces clean dirty imports exports subroutines methods
 # vim: set ts=8 sts=4 sw=4 tw=78 et :
 
+our $VERSION = '0.007';
+
 use Moose;
 with (
     'Dist::Zilla::Role::FileGatherer',
@@ -79,7 +81,7 @@ sub gather_files
 use strict;
 use warnings;
 
-# this test was generated with {{ ref($plugin) . ' ' . ($plugin->VERSION || '<self>') }}
+# this test was generated with {{ ref($plugin) . ' ' . $plugin->VERSION }}
 
 use Test::More 0.94;
 use Test::CleanNamespaces {{ $tcn_prereq }};

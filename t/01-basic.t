@@ -53,7 +53,7 @@ cmp_deeply(
                         },
                     },
                     name => 'Test::CleanNamespaces',
-                    version => ignore,
+                    version => Dist::Zilla::Plugin::Test::CleanNamespaces->VERSION,
                 },
             ),
         }),
