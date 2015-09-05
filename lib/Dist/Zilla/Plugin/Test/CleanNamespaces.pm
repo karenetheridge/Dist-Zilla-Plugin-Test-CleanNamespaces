@@ -47,6 +47,7 @@ around dump_config => sub
     $config->{+__PACKAGE__} = {
         skips => [ $self->skips ],
         filename => $self->filename,
+        blessed($self) ne __PACKAGE__ ? ( version => $VERSION ) : (),
     };
 
     return $config;
