@@ -30,7 +30,7 @@ my $file = $build_dir->child(qw(xt author clean-namespaces.t));
 ok(-e $file, 'test created');
 
 my $content = $file->slurp_utf8;
-unlike($content, qr/[^\S\n]\n/m, 'no trailing whitespace in generated test');
+unlike($content, qr/[^\S\n]\n/, 'no trailing whitespace in generated test');
 
 subtest 'run the generated test: filters out the "skip" regexp from the modules checked' => sub
 {
