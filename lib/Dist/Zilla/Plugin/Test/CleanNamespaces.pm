@@ -82,7 +82,7 @@ sub gather_files
 use strict;
 use warnings;
 
-# this test was generated with {{ ref($plugin) . ' ' . $plugin->VERSION }}
+# this test was generated with {{ ref $plugin }} {{ $plugin->VERSION }}
 
 use Test::More 0.94;
 use Test::CleanNamespaces {{ $tcn_prereq }};
