@@ -59,8 +59,8 @@ sub register_prereqs
 
     $self->zilla->register_prereqs(
         {
-            type  => 'requires',
             phase => $self->filename =~ /^t/ ? 'test' : 'develop',
+            type  => 'requires',
         },
         'Test::CleanNamespaces' => $self->_tcn_prereq,
     );
