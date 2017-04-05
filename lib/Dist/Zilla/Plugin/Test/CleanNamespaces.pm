@@ -1,9 +1,9 @@
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::Test::CleanNamespaces;
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 # ABSTRACT: Generate a test to check that all namespaces are clean
 # KEYWORDS: plugin testing namespaces clean dirty imports exports subroutines methods
-# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 our $VERSION = '0.007';
 
