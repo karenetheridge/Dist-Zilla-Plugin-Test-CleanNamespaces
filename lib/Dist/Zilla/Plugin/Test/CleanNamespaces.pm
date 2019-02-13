@@ -90,7 +90,7 @@ use Test::CleanNamespaces {{ $tcn_prereq }};
 subtest all_namespaces_clean => sub {{
     $skips
     ? "{\n    namespaces_clean(
-        " . 'grep { my $mod = $_; not grep { $mod =~ $_ } ' . $skips . " }
+        " . 'grep { my $mod = $_; not grep $mod =~ $_, ' . $skips . " }
             Test::CleanNamespaces->find_modules\n    );\n};"
     : '{ all_namespaces_clean() };'
 }}
@@ -113,7 +113,7 @@ sub munge_file
             {
                 dist => \($self->zilla),
                 plugin => \$self,
-                skips => \( join(', ', map { 'qr/' . $_ . '/' } $self->skips) ),
+                skips => \( join(', ', map 'qr/'.$_.'/', $self->skips) ),
                 tcn_prereq => \($self->_tcn_prereq),
             }
         )
